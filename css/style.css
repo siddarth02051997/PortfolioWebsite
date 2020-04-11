@@ -58,7 +58,7 @@ section {
 img {
     display: block;
     max-width: 100%;
-}
+}S
 
 strong { font-weight: var(--fw-bold) }
 
@@ -143,6 +143,10 @@ header {
 .logo {
     max-width: 135px;
     cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .nav {
@@ -177,9 +181,100 @@ header {
     text-decoration: none;
 }
 
-.nav__link:hover {
+/* .nav__link:hover {
     color: var(--clr-accent);
+} */
+
+
+
+/* .nav__list
+{
+  position: relative;
+} */
+.nav__list .nav__items
+{
+  list-style: none;
+  text-align: center;
 }
+.nav__list .nav__items .nav__link
+{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 5px 20px;
+  display: inline-flex;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.nav__list:hover .nav__items .nav__link
+{
+  color: rgb(247, 238, 238);
+}
+.nav__list .nav__items:hover .nav__link
+{
+  color: #000;
+
+  /* background: rgba(255,255,255,1); */
+}
+.nav__list .nav__items .nav__link:before
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: rgba(0,0,0,.1);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 300px;
+  transition: letter-spacing 0.5s,left 0.5s;
+}
+.nav__list .nav__items a:hover:before
+{
+  content: attr(data-text);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 8px;
+  width: 2000px;
+  height: 2000px;
+}
+.nav__list .nav__items:nth-child(6n+1) .nav__link:before
+{
+  background: #81ecec;
+}
+.nav__list .nav__items:nth-child(6n+2) .nav__link:before
+{
+  background: #ff7675;
+}
+.nav__list .nav__items:nth-child(6n+3) .nav__link:before
+{
+  background: #55efc4;
+}
+.nav__list .nav__items:nth-child(6n+4) .nav__link:before
+{
+  background: #a29bfe;
+}
+.nav__list .nav__items:nth-child(6n+5) .nav__link:before
+{
+  background: #fd79a8;
+}
+.nav__list .nav__items:nth-child(6n+6) .nav__link:before
+{
+  background: #ffeaa7;
+}
+
+
+
+
+
+
 
 .nav-toggle {
     padding: .5em;
@@ -245,10 +340,12 @@ header {
 .hamburger::after { bottom: 6px; }
 
 
+
 /*  Intro section  */
 
 .intro {
     position: relative;
+    
 }
 
 .intro__img {
@@ -258,6 +355,9 @@ header {
 .section__subtitle--intro {
     display: inline-block;
 }
+
+
+
 
 @media (min-width: 600px) {
     .intro {
@@ -435,15 +535,18 @@ header {
 
 .footer__link {
     font-weight: var(--fw-bold);
-}
+    
+}   
 
 .footer__link:hover,
 .social-list__link:hover {
     opacity: .7;
+    
 }
 
 .footer__link:hover {
     text-decoration: underline;
+    
 }
 
 .social-list {
@@ -456,6 +559,7 @@ header {
 
 .social-list__item {
     margin: 0 .5em;
+    z-index: 1000;
 }
 
 .social-list__link {
@@ -468,6 +572,7 @@ header {
     padding: 10px 16px;
     background: #222222;
     color: #f1f1f1;
+    z-index: 200;
   }
   
   /* Page content */
@@ -477,12 +582,16 @@ header {
   
   /* The sticky class is added to the header with JS when it reaches its scroll position */
   .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
   .sticky + .content {
     padding-top: 102px;
   }
+
+

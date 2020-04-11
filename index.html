@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+
+ 
 </head>
 
 <body>
@@ -24,10 +26,11 @@
         </button>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__items"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__items"><a href="#services" class="nav__link">My Services</a></li>
-                <li class="nav__items"><a href="#about" class="nav__link">About Me</a></li>
-                <li class="nav__items"><a href="#work" class="nav__link">My Work</a></li>
+                <li class="nav__items"><a href="#home" class="nav__link" data-text="Home">Home</a></li>
+                <li class="nav__items"><a href="#services" class="nav__link" data-text="Services">Services</a></li>
+                <li class="nav__items"><a href="#about" class="nav__link" data-text="About">About</a></li>
+                <li class="nav__items"><a href="#work" class="nav__link" data-text="Work">Work</a></li>
+                <li class="nav__items"><a href="#footer" class="nav__link" data-text="Contact">Contact</a></li>
             </ul>
         </nav>
 
@@ -35,6 +38,7 @@
 
     <!-- Introduction  -->
     <section class="intro" id="home">
+       
         <h1 class="section_title section__title--intro">
             Hi, I am <strong>Siddarth Bulusu</strong>
         </h1>
@@ -138,7 +142,7 @@
 
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <!-- replace with your own email address -->
         <a href="mailto:siddarth@sid.dev" class="footer__link">siddarth@sid.dev</a>
         <ul class="social-list">

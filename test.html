@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<style>
+    h1 {
+        font-size: 3rem;
+    }
+
+    .cursor {
+        background-color: var(--clr-dark);
+        width: 0.25rem;
+        height: 2.6rem;
+        position: absolute;
+        top: 0.1rem;
+        left: 23.5rem;
+        animation-name: blink;
+        
+        animation-duration: 500ms;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes blink {
+        0% {            
+            opacity: 100%;
+        }
+
+        100% {
+            opacity: 0%;
+        }
+    }
+
+
+</style>
+
+<body>
+    <h1> &lt;let's Code&gt;.......</h1>
+    <div class= "cursor"></div>
+</body>
+
+</html>
+
+<!-- <style>
+
+    #ball {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      position: relative;
+      border-radius: 50%;
+      background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+      );
+      animation-name: bounce;
+      animation-duration: infinite;
+      animation-iteration-count: 3;
+    }
+  
+    @keyframes bounce{
+      0% {
+        top: 0px;
+      }
+      50% {
+        top: 249px;
+        width: 130px;
+        height: 70px;
+      }
+      100% {
+        top: 0px;
+      }
+    }
+  </style>
+  <div id="ball"></div> -->
